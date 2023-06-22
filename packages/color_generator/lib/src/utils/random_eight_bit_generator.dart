@@ -12,7 +12,7 @@ class RandomEightBitGenerator {
   static const eightBitMaxValue = 255;
 
   /// Creates a new [RandomEightBitGenerator] instance.
-  const RandomEightBitGenerator(this._random);
+  RandomEightBitGenerator([Random? random]) : _random = random ?? Random();
 
   /// Generates a random 8-bit integer.
   int generate() => _random.nextInt(eightBitMaxValue);

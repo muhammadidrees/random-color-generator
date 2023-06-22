@@ -22,6 +22,13 @@ void main() {
       expect(colorGenerator(), isA<ColorGenerator>());
     });
 
+    group('initializes', () {
+      test('without parameters', () {
+        final generator = RandomColorGenerator();
+        expect(generator, isA<RandomColorGenerator>());
+      });
+    });
+
     group('generateColor()', () {
       test('generates a CustomColor', () {
         when(() => randomEightBitGenerator.generate()).thenReturn(1);

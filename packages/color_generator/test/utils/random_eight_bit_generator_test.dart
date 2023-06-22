@@ -17,6 +17,13 @@ void main() {
       return RandomEightBitGenerator(random);
     }
 
+    group('initializes', () {
+      test('without parameters', () {
+        final generator = RandomEightBitGenerator();
+        expect(generator, isA<RandomEightBitGenerator>());
+      });
+    });
+
     group('eightBitMaxValue', () {
       test('is setup with the correct value', () {
         expect(

@@ -7,7 +7,10 @@ class RandomColorGenerator implements ColorGenerator {
 
   /// Creates a new [RandomColorGenerator] instance
   /// with the provided [RandomEightBitGenerator]
-  const RandomColorGenerator(this._randomEightBitGenerator);
+  RandomColorGenerator([
+    RandomEightBitGenerator? randomEightBitGenerator,
+  ]) : _randomEightBitGenerator =
+            randomEightBitGenerator ?? RandomEightBitGenerator();
 
   @override
   CustomColor generateColor() {
