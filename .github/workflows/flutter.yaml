@@ -1,6 +1,8 @@
-name: Application ON Push & PR DO Code check
-on: [push, pull_request]
-
+name: Application ON PR DO Code check
+on:
+  pull_request:
+    branches:
+      - master
 jobs:
   code-check:
     runs-on: ubuntu-latest
