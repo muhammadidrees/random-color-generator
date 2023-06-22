@@ -1,5 +1,11 @@
-/// A Calculator.
-class ColorGenerator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
+import 'package:color_generator/color_generator.dart';
+import 'package:color_generator/src/utils/utils.dart';
+import 'package:flutter/material.dart';
+
+part 'random_color_generator.dart';
+
+/// A Color Generator
+abstract class ColorGenerator {
+  /// generate a [CustomColor]
+  CustomColor generateColor();
 }
