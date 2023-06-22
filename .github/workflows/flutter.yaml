@@ -47,15 +47,18 @@ jobs:
               $dirs_to_analyse \
               --fatal-warnings \
               --fatal-performance \
-              --fatal-style
+              --fatal-style \
+              --disable-sunset-warning
             dart run dart_code_metrics:metrics \
               check-unused-files \
               $dirs_to_analyse \
-              --fatal-unused
+              --fatal-unused \
+              --disable-sunset-warning
             dart run dart_code_metrics:metrics \
-              check-unused-code \ 
+              check-unused-code \
               $dirs_to_analyse \
-              --fatal-unused
+              --fatal-unused \
+              --disable-sunset-warning
           fi
 
       - name: Check formatting
