@@ -5,4 +5,7 @@ dart_code_metrics:
     - prefer-match-file-name:
         exclude:
           - test/**
+    - avoid-late-keyword:
+        exclude:
+          - test/**
     
