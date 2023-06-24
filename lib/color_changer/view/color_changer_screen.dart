@@ -8,7 +8,9 @@ class ColorChangerScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider<ColorChangerCubit>(
-      create: (context) => ColorChangerCubit(),
+      create: (context) => ColorChangerCubit(
+        RandomUniqueColorGenerator(),
+      ),
       child: const ColorChangerView(),
     );
   }
