@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:random_color_generator/home/home.dart';
+import 'package:random_color_generator/color_changer/color_changer.dart';
 
 /// root widget for the app
 class App extends StatelessWidget {
@@ -8,13 +8,9 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       title: 'Color Generator',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: const HomePage(title: 'Flutter Demo Home Page'),
+      home: ColorChangerScreen(),
     );
   }
 }
