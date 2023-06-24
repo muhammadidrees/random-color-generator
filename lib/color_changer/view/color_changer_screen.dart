@@ -7,6 +7,6 @@ class ColorChangerScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const ColorChangerScreen();
+    return const ColorChangerView();
   }
 }
