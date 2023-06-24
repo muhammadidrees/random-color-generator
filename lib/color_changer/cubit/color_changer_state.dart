@@ -2,10 +2,16 @@ part of 'color_changer_cubit.dart';
 
 /// State of the color
 @immutable
-abstract class ColorChangerState {}
+abstract class ColorChangerState {
+  /// State of the color
+  const ColorChangerState();
+}
 
 /// Initial state of the color
-class ColorChangerInitial extends ColorChangerState {}
+class ColorChangerInitial extends ColorChangerState {
+  /// Initial state of the color
+  const ColorChangerInitial();
+}
 
 /// State of the color when it is changed
 class ColorChangerChanged extends ColorChangerState with EquatableMixin {
@@ -16,7 +22,7 @@ class ColorChangerChanged extends ColorChangerState with EquatableMixin {
   List<Object?> get props => [color];
 
   /// State of the color when it is changed
-  ColorChangerChanged(this.color);
+  const ColorChangerChanged(this.color);
 }
 
 /// Failed state of the color
@@ -25,5 +31,5 @@ class ColorChangerFailed extends ColorChangerState {
   final String message;
 
   /// Failed state of the color
-  ColorChangerFailed(this.message);
+  const ColorChangerFailed(this.message);
 }
