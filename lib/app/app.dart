@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:random_color_generator/color_changer/view/view.dart';
+import 'package:random_color_generator/color_changer/color_changer.dart';
 
 /// root widget for the app
 class App extends StatelessWidget {
