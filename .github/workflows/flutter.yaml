@@ -14,6 +14,15 @@ jobs:
         uses: andstor/file-existence-action@v1
         with:
           files: "pubspec.yaml, packages/*/pubspec.yaml"
+
+      - name: Find pubspec.yaml files
+        id: find_files
+        run: |
+          echo "::set-output name=files::$(find . -name pubspec.yaml | tr '\n' ',')"
+          
+      - name: Debug check_files output
+        run: echo "${{ steps.find_files.outputs.files }}"
+
       
       - name: Debug check_files output
         run: echo "${{ steps.check_files.outputs.files }}"
